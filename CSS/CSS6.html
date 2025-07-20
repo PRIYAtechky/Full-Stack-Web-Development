@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Attribute Selector</title>
+    <style>
+        ol {
+            list-style-position: inside;
+        }
+
+        /*  Attribute Existence */
+        input[type][placeholder] {
+            border: 2px dotted red;
+        }
+
+        /* Exact Value Attribute Selector */
+        input[type="text"] {
+            background-color: rgb(234, 205, 172);
+        }
+
+        a[href="https://www.google.com/"] {
+            color: chartreuse;
+        }
+
+        /* Partial Value Attribute Selector */
+
+        /* a[href*="wikipedia"]{
+        color: red;
+    } */
+
+        a[href*="WIKIPEDIA" i] {
+            /* i for insensitive */
+            color: red;
+        }
+
+        /* Prefix Attribute value Selector */
+        a[href^="h"]{
+            background-color: cadetblue;
+        }
+
+        
+        /* Suffix Attribute value Selector */
+        a[href$="1"]{
+            background-color:fuchsia;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1 style="background-color: deeppink;">Attribute Selector</h1> <!-- syntax:element[attribute]  -->
+            <ol>
+                <li>Exact Value Attribute Selector</li> <!--Element[Attribute:Value] -->
+                <li>Partial Value Attribute Selector</li>
+                <!--Element[Attribute*:Value i] if it containss(*),i for insenitive -->
+            </ol>
+        </div>
+    </center>
+
+    <div>
+        <h1>1.Exact Value Attribute Selector</h1>
+        <lable>Name:</lable> <input type="text" placeholder="Enter Your Name"> <br>
+        <label>Age:</label> <input type="number" placeholder="your Age"> <br>
+        <a href="https://www.google.com/">google</a>
+    </div>
+
+    <div>
+        <h1>2.Partial Value Attribute Selector</h1>
+        <h2>Web Development</h2>
+        <p>Web development is the process of creating, building, and maintaining websites and <a
+                href="https://en.wikipedia.org/wiki/Web_application">web applications</a> . It involves a range of
+            tasks, from designing the user interface to writing code that powers the site's functionality and managing
+            its data. Modern web development often involves both <a
+                href="https://en.wikipedia.org/wiki/Front-end_web_development"> front-end</a> and <a
+                href="https://en.wikipedia.org/wiki/Back_end">back-end</a>work, as well as database management and other
+            technical aspects. </p>
+    </div>
+
+    <hr>
+    <div>
+        <ul>
+            <li><a href="#wd1">Web Development</a></li>
+            <li><a href="#ai1">Artificial Intelligence</a></li>
+        </ul>
+
+        <h1 id="wd">Web Development</h1>
+        <p>Web Development involves building websites and web applications using technologies like HTML, CSS, JavaScript
+            for the frontend, and server-side languages for the backend. It also includes managing databases to store
+            information, ensuring smooth user interaction, and creating responsive, interactive, and functional online
+            platforms for various purposes.</p>
+
+        <h1 id="ai">Artificial Intelligence</h1>
+        <p>Artificial Intelligence enables machines to perform tasks that usually require human intelligence, such as
+            learning, problem-solving, and decision-making. AI includes fields like machine learning, natural language
+            processing, and computer vision, helping in automation, data analysis, and creating smart systems that
+            improve efficiency across different industries and applications.</p>
+    </div>
+
+</body>
+
+</html>

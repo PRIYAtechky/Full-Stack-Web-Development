@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Advanced Selectors</title>
+  <style>
+   body li{
+    background-color: bisque;
+    color: brown;
+   }
+   body>h1{
+     
+     font-variant: initial;
+     background-color: chartreuse;
+     font-style: italic;
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: bold;
+   }
+
+   h1~h2{
+    background-color: aqua;
+   }
+   div>p+span{
+    color: chocolate;
+   }
+   div>p{
+    background-color: darkgrey;
+   }
+  </style>
+</head>
+<body>
+  <h1>Advanced Selectors</h1>
+  <h2>Child selectors</h2>
+  <ul>
+    <li>Direct Child Selector (>)</li><br>
+    <li>Descendant Child Selector (space)</li>
+  </ul>
+<div>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet ratione ullam, neque soluta molestiae ipsam quas totam consectetur minus ipsum dicta perspiciatis nulla dolor excepturi voluptas saepe nemo facere? Quo. ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum animi, quis dolores reprehenderit sequi. Hic ex odit eius distinctio? ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aliquid? ipsum dolor sit, amet consectetur adipisicing elit. Sunt pariatur amet sit error dolorem aliquam reiciendis quam exercitationem quod facere?</p>
+  <span>Web Development</span>
+</div>
+</body>
+</html>
